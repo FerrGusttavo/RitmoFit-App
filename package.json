@@ -6,6 +6,7 @@
   "author": "Gustavo Augusto <gustavo.augusto.f@outlook.com>",
   "license": "MIT",
   "devDependencies": {
+    "@rocketseat/eslint-config": "2.2.2",
     "@types/node": "20.11.18",
     "@typescript-eslint/eslint-plugin": "7.0.1",
     "@typescript-eslint/parser": "7.0.1",
