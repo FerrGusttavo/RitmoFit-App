@@ -1,5 +1,4 @@
 import { usersRepository } from "@/repositories/users-repository";
-import { compare } from "bcryptjs";
 import { User } from "@prisma/client";
 import { resourceNotFoundError } from "./errors/resource-not-found-error";
 
