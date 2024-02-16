@@ -5,7 +5,7 @@ A RitmoFit é um aplicativo intuitivo que permite que os frequentadores de acade
 ## RFs (Requisitos Funcionais)
 
 - [x] Deve ser possível se cadastrar;
-- [ ] Deve ser possível se autenticar;
+- [x] Deve ser possível se autenticar;
 - [ ] Deve ser possível obter o perfil de um usuário logado;
 - [ ] Deve ser possível obter o número de check-ins realizados pelo usuário logado;
 - [ ] Deve ser possível o usuário obter o seu histórico de check-ins;
@@ -26,6 +26,6 @@ A RitmoFit é um aplicativo intuitivo que permite que os frequentadores de acade
 ## RFNs (Requisitos Não-Funcionais)
 
 - [x] A senha do usuário precisa estar criptografada;
-- [ ] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
+- [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
 - [ ] Os dados da aplicação precisam estar paginadas com 20 itens por página;
 - [ ] O usuário deve ser identificado por um JWT (JSON Web Token);
