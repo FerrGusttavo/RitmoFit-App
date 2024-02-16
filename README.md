@@ -13,7 +13,7 @@ A RitmoFit é um aplicativo intuitivo que permite que os frequentadores de acade
 - [ ] Deve ser possível o usuário buscar academias pelo nome;
 - [x] Deve ser possível o usuário realizar check-in em uma academia;
 - [ ] Deve ser possível validar o check-in de um usuário;
-- [ ] Deve ser possível cadastrar uma academia;
+- [x] Deve ser possível cadastrar uma academia;
 
 ## RNs (Regras de Negócio)
 
