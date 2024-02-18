@@ -1,6 +1,6 @@
 # RitmoFit
 
-A RitmoFit é um aplicativo intuitivo que permite que os frequentadores de academias façam check-in de forma rápida e eficiente. 
+A RitmoFit é um aplicativo intuitivo que permite que os frequentadores de academias façam check-in de forma rápida e eficiente.
 
 ## RFs (Requisitos Funcionais)
 

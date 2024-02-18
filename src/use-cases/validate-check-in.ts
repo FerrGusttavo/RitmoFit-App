@@ -5,41 +5,40 @@ import dayjs from "dayjs";
 import { LateCheckInValidationError } from "./errors/late-check-in-validation-error";
 
 interface ValidateCheckInUseCaseRequest {
-    checkInId: string
+  checkInId: string;
 }
 
 interface ValidateCheckInUseCaseResponse {
-    checkIn: CheckIn
+  checkIn: CheckIn;
 }
 
 export class ValidateCheckInUseCase {
-    constructor(
-        private checkInRepository: CheckInsRepository,
-        ) {}
+  constructor(private checkInRepository: CheckInsRepository) {}
 
-    async execute({ checkInId
-    }: ValidateCheckInUseCaseRequest): Promise<ValidateCheckInUseCaseResponse> {
-        const checkIn = await this.checkInRepository.findById(checkInId)
+  async execute({
+    checkInId,
+  }: ValidateCheckInUseCaseRequest): Promise<ValidateCheckInUseCaseResponse> {
+    const checkIn = await this.checkInRepository.findById(checkInId);
 
-        if (!checkIn) {
-            throw new resourceNotFoundError()
-        }
-
-        const distanceInMinutesFromCheckInCreation = dayjs(new Date()).diff(
-            checkIn.created_at,
-            'minute',
-        )
-
-        if (distanceInMinutesFromCheckInCreation > 20) {
-            throw new LateCheckInValidationError()
-        }
-
-        checkIn.validated_at = new Date()
-
-        await this.checkInRepository.save(checkIn)
-
-        return {
-            checkIn,
-        }
+    if (!checkIn) {
+      throw new resourceNotFoundError();
     }
+
+    const distanceInMinutesFromCheckInCreation = dayjs(new Date()).diff(
+      checkIn.created_at,
+      "minute"
+    );
+
+    if (distanceInMinutesFromCheckInCreation > 20) {
+      throw new LateCheckInValidationError();
+    }
+
+    checkIn.validated_at = new Date();
+
+    await this.checkInRepository.save(checkIn);
+
+    return {
+      checkIn,
+    };
+  }
 }

@@ -2,10 +2,10 @@ import { PrismaGymsRepository } from "@/repositories/prisma/prisma-gyms-reposito
 import { PrismaCheckInsRepository } from "@/repositories/prisma/prisma-check-ins-repository";
 import { CheckInUseCase } from "../check-in";
 
-export function makeCheckInUseCase () {
-    const checkInsRepository = new PrismaCheckInsRepository();
-    const gymsRepository = new PrismaGymsRepository()
-    const useCase = new CheckInUseCase(checkInsRepository, gymsRepository);
+export function makeCheckInUseCase() {
+  const checkInsRepository = new PrismaCheckInsRepository();
+  const gymsRepository = new PrismaGymsRepository();
+  const useCase = new CheckInUseCase(checkInsRepository, gymsRepository);
 
-    return useCase
+  return useCase;
 }
