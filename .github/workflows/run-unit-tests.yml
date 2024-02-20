@@ -13,5 +13,5 @@ jobs:
         with:
           node-version: 20
           cache: "yarn"
-      - run: yarn ci
+      - run: yarn install --frozen-lockfile
       - run: yarn test
